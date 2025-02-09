@@ -20,7 +20,11 @@ public class CatArrayList {
     }
 
     public void removeCat(int number) {
-        cats.remove(number);
+        if (number < cats.size()) {
+            cats.remove(number);
+        } else {
+            System.out.println("Кошек в списке меньше чем это число");
+        }
     }
 
     public void printCats() {
